@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p1:livre xmlns:p1="http://www.soc.com" xmlns:p2="http://www.msa.com" titre="Soc guide">
+   <p1:auteurs>
+      <p1:auteur name="fourat" />
+      <p1:auteur name="mohamed" />
+   </p1:auteurs>
+   <p1:sections>
+      <p1:section title="section 1">
+         <p1:chapitres>
+            <p1:chapitre title="chapter 1">
+               <p1:paragraphes>
+                  <p1:paragraphe>&lt;element id="10"&gt;&amp;gt;&lt;/element&gt;</p1:paragraphe>
+                  <p1:paragraphe><![CDATA[<element id="10">&gt;</element>]]></p1:paragraphe>
+               </p1:paragraphes>
+            </p1:chapitre>
+            <p1:chapitre title="chapter 2">
+               <p1:paragraphes>
+                  <p1:paragraphe>1</p1:paragraphe>
+                  <p1:paragraphe>2</p1:paragraphe>
+               </p1:paragraphes>
+            </p1:chapitre>
+         </p1:chapitres>
+      </p1:section>
+      <p2:section title="section 2">
+         <p2:chapitres>
+            <p2:chapitre title="chapter 1">
+               <p2:paragraphes>
+                  <p2:paragraphe>1</p2:paragraphe>
+                  <p2:paragraphe>2</p2:paragraphe>
+               </p2:paragraphes>
+            </p2:chapitre>
+            <p2:chapitre title="chapter 2">
+               <p2:paragraphes>
+                  <p2:paragraphe />
+                  <p2:paragraphe />
+               </p2:paragraphes>
+            </p2:chapitre>
+         </p2:chapitres>
+      </p2:section>
+   </p1:sections>
+</p1:livre>
