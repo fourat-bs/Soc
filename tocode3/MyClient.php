@@ -13,7 +13,7 @@ require_once('lib/nusoap.php');
           exit();
       }
        try {
-        $result = $client->call('Multiply', array('intA'=> 'aa','intB'=>4));
+        $result = $client->call('Multiply', array('intA'=> 5,'intB'=>4));
         echo "<h2>Result<h2/>";
         print_r($result);
         }
