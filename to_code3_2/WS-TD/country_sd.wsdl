@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://localhost/to_code3_2/WS-TD/wstd_service.php" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="Country" targetNamespace="http://localhost/to_code3_2/WS-TD/wstd_service.php">
+  <types>
+    <xsd:schema targetNamespace="http://localhost/to_code3_2/WS-TD/wstd_service.php">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+    </xsd:schema>
+  </types>
+  <portType name="CountryPort">
+    <operation name="get_information">
+      <input message="tns:get_informationIn"/>
+    </operation>
+  </portType>
+  <binding name="CountryBinding" type="tns:CountryPort">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="get_information">
+      <soap:operation soapAction="http://localhost/to_code3_2/WS-TD/wstd_service.php#get_information"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/to_code3_2/WS-TD/wstd_service.php"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/to_code3_2/WS-TD/wstd_service.php"/>
+      </output>
+    </operation>
+  </binding>
+  <message name="get_informationIn">
+    <part name="country_iso" type="xsd:anyType"/>
+    <part name="operation" type="xsd:anyType"/>
+  </message>
+  <service name="CountryService">
+    <port name="CountryPort" binding="tns:CountryBinding">
+      <soap:address location="http://localhost/to_code3_2/WS-TD/wstd_service.php"/>
+    </port>
+  </service>
+</definitions>
